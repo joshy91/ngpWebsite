@@ -1,4 +1,10 @@
 Rails.application.routes.draw do
+  get 'parts/automaticTrans'
+  get 'parts/standardTrans'
+  get 'parts/performance'
+  get 'parts/differential'
+  get 'parts/transferCase'
+  get 'parts/toolsAndEquipment'
   get 'welcome/home'
   get 'welcome/automaticTrans'
   get 'welcome/standardTrans'
