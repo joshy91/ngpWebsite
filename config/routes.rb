@@ -5,7 +5,7 @@ Rails.application.routes.draw do
   get 'parts/differential'
   get 'parts/transferCase'
   get 'parts/toolsAndEquipment'
-  get 'welcome/home'
+  root 'welcome#home'
   get 'welcome/automaticTrans'
   get 'welcome/standardTrans'
   get 'welcome/differential'
