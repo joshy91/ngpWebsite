@@ -31,28 +31,26 @@
                     <!-- Links -->
                     <ul class="navbar-nav mr-auto">
                         <li class="nav-item active">
-                            <a class="nav-link" href="#">Home
+                            <%= link_to "Home", root_path, class: "nav-link" %>
                                 <span class="sr-only">(current)</span>
-                            </a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#">About</a>
+                            <%= link_to "About", root_path, class: "nav-link" %>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#">Suppliers</a>
+                            <%= link_to "Suppliers", root_path, class: "nav-link" %>
                         </li>
                         <!-- Dropdown -->
                         <li class="nav-item dropdown">
                             <a class="nav-link dropdown-toggle" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Parts</a>
                             <div class="dropdown-menu dropdown-primary" aria-labelledby="navbarDropdownMenuLink">
-                                <a class="dropdown-item" href="#">Automatic Transmission</a>
-                                <a class="dropdown-item" href="#">Standard Transmission</a>
-                                <a class="dropdown-item" href="#">Differential</a>
-                                <a class="dropdown-item" href="#">Tool Cases</a>
-                                <a class="dropdown-item" href="#">Performance</a>
-                                <a class="dropdown-item" href="#">Tools & Equipment</a>
-                                
-                            </div>
+                                <%= link_to "Automatic Transmission", automaticTransmission_path, class: "dropdown-item" %>
+                                <%= link_to "Standard Transmission", standardTransmission_path, class: "dropdown-item" %>
+                                <%= link_to "Differential", differential_path, class: "dropdown-item" %>
+                                <%= link_to "Transfer Case", transferCase_path, class: "dropdown-item" %>
+                                <%= link_to "Performance", performance_path, class: "dropdown-item" %>
+                                <%= link_to "Tools & Equipment", toolsAndEquipment_path, class: "dropdown-item" %>
+                           </div>
                         </li>
                     </ul>
                     <!-- Links -->
