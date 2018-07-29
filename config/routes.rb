@@ -1,6 +1,6 @@
 Rails.application.routes.draw do
-  get 'info/about'
-  get 'info/suppliers'
+  get 'about' => 'info#about'
+  get 'suppliers' => 'info#suppliers'
   get 'automaticTransmission' => 'parts#automaticTrans'
   get 'standardTransmission' => 'parts#standardTrans'
   get 'performance' => 'parts#performance'
