@@ -57,6 +57,9 @@
                                 <%= link_to "Tools & Equipment", toolsAndEquipment_path, class: "dropdown-item" %>
                            </div>
                         </li>
+                        <li class="nav-item">
+                            <%= link_to "Contact", root_path, class: "nav-link" %>
+                        </li>
                     </ul>
                     <!-- Links -->
                     <ul class="navbar-nav nav-flex-icons ml-auto">
@@ -170,11 +173,11 @@ Toll-Free: 1-800-929-5103</p>
     <script>
     // Regular map
     function regular_map() {
-        var var_location = new google.maps.LatLng(29.369537,-98.544078);
+        var var_location = new google.maps.LatLng(29.369542, -98.544062);
 
         var var_mapoptions = {
             center: var_location,
-            zoom: 16
+            zoom: 12
         };
 
         var var_map = new google.maps.Map(document.getElementById("map-container"),
@@ -183,12 +186,20 @@ Toll-Free: 1-800-929-5103</p>
         var var_marker = new google.maps.Marker({
             position: var_location,
             map: var_map,
-            title: "Nogalitos Gear Company"
+            title: "Jugo Juicery"
         });
     }
 
     // Initialize maps
     google.maps.event.addDomListener(window, 'load', regular_map);
+    </script>
+    <!--Load the API from the specified URL
+    * The async attribute allows the browser to render the page while the API loads
+    * The key parameter will contain your own API key (which is not needed for this tutorial)
+    * The callback parameter executes the initMap() function
+    -->
+    <script async defer
+    src="https://maps.googleapis.com/maps/api/js?key=#{ENV["google_map_key"]}&callback=initMap">
     </script>
     <!-- Carousel options -->
     <script>
