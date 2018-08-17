@@ -1,0 +1,60 @@
+<section id="contact">
+                <!-- Heading -->
+                <h2 class="mb-5 font-weight-bold text-center">Contact us</h2>
+                <!--Grid row-->
+                <div class="row">
+                    <!--Grid column-->
+                    <div class="col-lg-5 col-md-12">
+                        <!-- Form contact -->
+                        <div class="form">
+<%= simple_form_for @contact do |form| %>
+<%= form.error_notification %>
+<%= form.input :name, autofocus: true %>
+<%= form.input :email %>
+<%= form.input :message, as: :text %>
+<%= form.button :submit, 'Submit', class: 'submit' %>
+<% end %>
+</div>
+                        <!-- Form contact -->
+                    </div>
+                    <!--Grid column-->
+                    <!--Grid column-->
+                    <div class="col-lg-7 col-md-12">
+                        <!--Grid row-->
+                        <div class="row text-center">
+                            <!--Grid column-->
+                            <div class="col-lg-4 col-md-12 mb-3">
+                                <p>
+                                    <i class="fa fa-map fa-1x mr-2 grey-text"></i> 433 New Laredo Hwy.
+San Antonio, TX 78211 </p>
+                            </div>
+                            <!--Grid column-->
+                            <!--Grid column-->
+                            <div class="col-lg-4 col-md-6 mb-3">
+                                <p>
+                                    <i class="fa fa-building fa-1x mr-2 grey-text"></i>
+M-F:
+    8:00 am - 5:30 pm 
+Sat:
+    9:00 am - 1:00 pm <br>
+Sun:
+    Closed
+</p>
+                            </div>
+                            <!--Grid column-->
+                            <!--Grid column-->
+                            <div class="col-lg-4 col-md-6 mb-3">
+                                <p>
+                                    <i class="fa fa-phone fa-1x mr-2 grey-text"></i>Tel: 210-923-4571 <br>
+Toll-Free: 1-800-929-5103</p>
+                            </div>
+                            <!--Grid column-->
+                        </div>
+                        <!--Grid row-->
+                        <!--Google map-->
+                        <div id="map-container" class="z-depth-1-half map-container mb-5" style="height: 400px"></div>
+                    </div>
+                    <!--Grid column-->
+                </div>
+                <!--Grid row-->
+            </section>

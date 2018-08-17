@@ -73,6 +73,9 @@
                 <a class="nav-link" href="#"><i class="fa fa-envelope" aria-hidden="true"></i></a>
             </li>
         </ul>
+        <%= link_to gearwizard_path, class: "navbar-brand" do %>
+       <img src="https://s3.amazonaws.com/ngpwebsite/ngpimages/DiffWizardcompact.png" height="65" class="d-inline-block align-top" alt="">
+       <% end %>
                 </div>
                 <!-- Collapsible content -->
             </div>
@@ -90,17 +93,22 @@
                     <div class="col-lg-5 col-md-12">
                         <!-- Form contact -->
                         <form class="p-5">
+                        
                             <div class="md-form form-sm"> <i class="fa fa-user prefix grey-text"></i>
                                 <input type="text" id="form3" class="form-control form-control-sm">
-                                <label for="form3">Your name</label>
+                                <label for="form3">Your Fullame</label>
                             </div>
                             <div class="md-form form-sm"> <i class="fa fa-envelope prefix grey-text"></i>
                                 <input type="text" id="form2" class="form-control form-control-sm">
-                                <label for="form2">Your email</label>
+                                <label for="form2">Your Email</label>
                             </div>
                             <div class="md-form form-sm"> <i class="fa fa-tag prefix grey-text"></i>
                                 <input type="text" id="form32" class="form-control form-control-sm">
-                                <label for="form34">Subject</label>
+                                <label for="form34">Your Phone Number</label>
+                            </div>
+                            <div class="md-form form-sm"> <i class="fa fa-tag prefix grey-text"></i>
+                                <input type="text" id="form32" class="form-control form-control-sm">
+                                <label for="form34">Your Address (Optional)</label>
                             </div>
                             <div class="md-form form-sm"> <i class="fa fa-pencil prefix grey-text"></i>
                                 <textarea type="text" id="form8" class="md-textarea form-control form-control-sm" rows="4"></textarea>
