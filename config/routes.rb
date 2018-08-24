@@ -9,6 +9,6 @@ Rails.application.routes.draw do
   get 'transferCase' => 'parts#transferCase'
   get 'toolsAndEquipment' => 'parts#toolsAndEquipment'
   root 'welcome#home'
-  resources :contact, only: [:new, :create]
+  resources :contacts, only: [:new, :create]
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 end

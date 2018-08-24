@@ -63,6 +63,25 @@ Rails.application.configure do
   # config.active_job.queue_adapter     = :resque
   # config.active_job.queue_name_prefix = "ngpartsWebsite_#{Rails.env}"
 
+  config.action_mailer.delivery_method = :smtp
+# SMTP settings for mailgun
+ActionMailer::Base.smtp_settings = {
+  :port           => 587,
+  :address        => "smtp.mailgun.org",
+  :domain         => ENV['mail_gun_domain'],
+  :user_name      => ENV['mail_gun_username'],
+  :password       => ENV['mail_gun_password'],
+  :authentication => :plain,
+}
+
+# Defaults to:
+# config.action_mailer.sendmail_settings = {
+#   location: '/usr/sbin/sendmail',
+#   arguments: '-i'
+# }
+config.action_mailer.perform_deliveries = true
+config.action_mailer.raise_delivery_errors = true
+
   config.action_mailer.perform_caching = false
 
   # Ignore bad email addresses and do not raise email delivery errors.
