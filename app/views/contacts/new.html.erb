@@ -6,27 +6,30 @@
                 <!-- Heading -->
                 <h2 class="mb-5 font-weight-bold text-center">Contact us</h2>
                 <!--Grid row-->
-                <div class="row">
+                <div class="row text-center">
                     <!--Grid column-->
                     <div class="col-lg-5 col-md-12">
-                        <!-- Form contact -->
+                            <!--Grid column-->
+                                <p>
+                                    <i class="fa fa-gear fa-1x mr-2 red-text"></i> Email Form Under Maintenance! <br> <strong> Contact shawn@ngparts.com directly </strong> </p>
+			<!-- Form contact -->
                         <form class="p-5">
 <%= simple_form_for @contact do |form| %>
 <%= form.error_notification %>
 <div class="md-form form-sm"> <i class="fa fa-user prefix grey-text"></i>
-<%= form.input_field :name, placeholder: 'Name', autofocus: true, input_html: { class: 'form-control form-control-sm', type: 'text', id: 'form3' } %>
+<%= form.input_field :name, placeholder: 'Name (Under Maintenance)', autofocus: true, input_html: { class: 'form-control form-control-sm', type: 'text', id: 'form3' } %>
 </div>
 <div class="md-form form-sm"> <i class="fa fa-envelope prefix grey-text"></i>
-<%= form.input_field :email, placeholder: 'Email', input_html: { class: 'form-control form-control-sm', type: 'text', id: 'form4' } %>
+<%= form.input_field :email, placeholder: 'Email (Under Maintenance)', input_html: { class: 'form-control form-control-sm', type: 'text', id: 'form4' } %>
 </div>
 <div class="md-form form-sm"> <i class="fa fa-phone prefix grey-text"></i>
-<%= form.input_field :phone, placeholder: 'Phone', input_html: { class: 'form-control form-control-sm', type: 'text', id: 'form5' } %>
+<%= form.input_field :phone, placeholder: 'Phone (Under Maintenance)', input_html: { class: 'form-control form-control-sm', type: 'text', id: 'form5' } %>
 </div>
 <div class="md-form form-sm"> <i class="fa fa-home prefix grey-text"></i>
-<%= form.input_field :address, placeholder: 'Address', input_html: { class: 'form-control form-control-sm', type: 'text', id: 'form6' } %>
+<%= form.input_field :address, placeholder: 'Address (Under Maintenance)', input_html: { class: 'form-control form-control-sm', type: 'text', id: 'form6' } %>
 </div>
 <div class="md-form form-sm"> <i class="fa fa-file-text-o prefix grey-text"></i>
-<%= form.input_field :message, as: :text, placeholder: 'Message', input_html: { class: "md-textarea form-control form-control-sm", type: 'text',rows:"4", id: 'form3' } %>
+<%= form.input_field :message, as: :text, placeholder: 'Message (Under Maintenance)', input_html: { class: "md-textarea form-control form-control-sm", type: 'text',rows:"4", id: 'form3' } %>
 </div>
 <%= form.button :submit, 'Submit', class: "btn btn-primary" %>
 <% end %>
