@@ -2,13 +2,13 @@
 
 html, 
 body, 
-header, 
+header,
 #intro {
     height: 100%;
 }
 
 #intro {
-    background: url("https://s3.amazonaws.com/ngpwebsite/automaticTrans.jpg")no-repeat center center fixed;
+    background: url("https://s3.amazonaws.com/ngpwebsite/automaticTrans.jpg")no-repeat center center;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
