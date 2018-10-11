@@ -13,8 +13,8 @@
                                 <p>
                                     <i class="fa fa-gear fa-1x mr-2 red-text"></i> Email Form Under Maintenance! <br> <strong> Contact shawn@ngparts.com directly </strong> </p>
 			<!-- Form contact -->
-                        <form class="p-5">
-<%= simple_form_for @contact do |form| %>
+
+<%= simple_form_for(@contact, html: { class: 'form' }) do |form| %>
 <%= form.error_notification %>
 <div class="md-form form-sm"> <i class="fa fa-user prefix grey-text"></i>
 <%= form.input_field :name, placeholder: 'Name (Under Maintenance)', autofocus: true, input_html: { class: 'form-control form-control-sm', type: 'text', id: 'form3' } %>
@@ -29,11 +29,10 @@
 <%= form.input_field :address, placeholder: 'Address (Under Maintenance)', input_html: { class: 'form-control form-control-sm', type: 'text', id: 'form6' } %>
 </div>
 <div class="md-form form-sm"> <i class="fa fa-file-text-o prefix grey-text"></i>
-<%= form.input_field :message, as: :text, placeholder: 'Message (Under Maintenance)', input_html: { class: "md-textarea form-control form-control-sm", type: 'text',rows:"4", id: 'form3' } %>
+<%= form.input_field :message, as: :text, placeholder: 'Message (Under Maintenance)', input_html: { class: "md-textarea form-control form-control-sm", type: 'text',rows:"4", id: 'form7' } %>
 </div>
-<%= form.button :submit, 'Submit', class: "btn btn-primary" %>
+<%= form.button :submit, class: 'btn btn-primary' %>
 <% end %>
-</form>
                         <!-- Form contact -->
                     </div>
                     <!--Grid column-->
