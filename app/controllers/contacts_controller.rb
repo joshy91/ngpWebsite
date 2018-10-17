@@ -8,6 +8,7 @@ def create
 if @contact.save
 	redirect_to root_path
 	ContactMailer.with(contact: @contact).contact_email.deliver_now
+	ContactMailer.with(contact: @contact).return_email.deliver_now
 	flash[:success] = "Welcome to the Sample App!"
 else
 	render 'new'
