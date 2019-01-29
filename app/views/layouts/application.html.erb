@@ -85,8 +85,8 @@
             </div>
         </nav>
         <!--/.Navbar-->
+    </header>
     <%= yield %>
-    </body>
     <!--Main layout-->
     
     <!-- SCRIPTS -->
@@ -96,11 +96,10 @@
     <script type="text/javascript" src="/assets/popper.min.js"></script>
     <!-- Bootstrap core JavaScript -->
     <script type="text/javascript" src="/assets/bootstrap.min.js"></script>
-    <!-- MDB core JavaScript -->
-    <script type="text/javascript" src="/assets/mdb.min.js"></script>
     <!--Google Maps-->
     <script src="https://maps.google.com/maps/api/js"></script>
     <!-- Google Maps settings -->
+    <%= javascript_include_tag 'application', media: 'all' %>
     <script>
     // Regular map
     function regular_map() {
@@ -138,4 +137,5 @@
         interval: 3000,
     })
     </script>
+</body>
 </html>

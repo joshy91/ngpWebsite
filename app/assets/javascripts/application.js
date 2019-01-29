@@ -11,7 +11,6 @@
 // about supported directives.
 //
 //= require jquery-3.3.1.min
-//= require jquery_ujs
 //= require popper.min
 //= require bootstrap
 //= require mdb

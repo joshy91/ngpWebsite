@@ -1,10 +1,18 @@
 /* Your custom styles */
+/* Required for full background image */
 
-html, 
-body, 
-header,
-.intro {
-    height: 100%;
+html,
+body,
+.view {
+  height: 100%;
 }
 
-        
+
+@media (max-width: 740px) {
+  html,
+  body,
+  header,
+  .view {
+    height: 100vh;
+  }
+}
