@@ -6,6 +6,7 @@ def contact_email
 mg_client = Mailgun::Client.new ENV['mail_gun_key']
 message_params = {:from    => @contact.email,
                   :to      => ENV['OWNER_EMAIL'],
+		  :cc      => ENV['support_email'],
                   :subject => 'NGParts Website Message from ' + @contact.name,
                   :text    => 'You received a message from ' + @contact.name + ' with email address ' + @contact.email + ' and phone number ' + @contact.phone + '.
 The visitor said: ' + @contact.message }
