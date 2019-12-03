@@ -1,4 +1,9 @@
 Rails.application.routes.draw do
+  get 'products/index'
+  get 'products/import'
+  resources :products do
+    collection { post :import }
+  end
   get 'gearwizard' => 'gearwyzd#gearwizard' 
   get 'about' => 'info#about'
   get 'suppliers' => 'info#suppliers'

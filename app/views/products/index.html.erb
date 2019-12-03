@@ -1,0 +1,101 @@
+<hr class="my-5">
+<%= flash[:notice] %>
+<%= simple_form_for :search, url: products_path, method: "GET", html: { class: 'form-inline' } do |f| %>
+  <%= f.input :part_number, input_html: {value: ""} %>   
+  <%= f.submit "Search", class: "btn btn-primary" %>
+<% end %>
+
+<% if @search.present? %>
+	<p>Showing result for part number <%= @part_number %></p>
+<% else %>
+	<p>Showing result for all parts</p>
+<% end %>
+
+<ul class="nav nav-tabs md-tabs" id="myTabMD" role="tablist">
+  <li class="nav-item">
+    <a class="nav-link active" id="popular-tab-md" data-toggle="tab" href="#popular-md" role="tab" aria-controls="popular-md"
+      aria-selected="true">popular</a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link" id="allItems-tab-md" data-toggle="tab" href="#allItems-md" role="tab" aria-controls="allItems-md"
+      aria-selected="false">All Items</a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link" id="contact-tab-md" data-toggle="tab" href="#contact-md" role="tab" aria-controls="contact-md"
+      aria-selected="false">Contact</a>
+  </li>
+</ul>
+<div class="tab-content card pt-5" id="myTabContentMD">
+  <div class="tab-pane fade show active" id="popular-md" role="tabpanel" aria-labelledby="popular-tab-md">
+<table>
+	<thread>
+		<tr>
+			<th>Part Category</th>
+			<th>Stock Number</th>
+			<th>Stock Description1</th>
+			<th>Stock Description2</th>
+			<th>Stock Description3</th>
+			<th>Last Cost</th>
+			<th>Quantity on Hand</th>
+		</tr>
+	</thread>
+	<tbody>
+		<% @products[0..10].each do |product| %>
+		<tr>
+			<td><%= product.part_category %></td>
+			<td><%= product.stock_number %></td>
+			<td><%= product.stock_description1 %></td>
+			<td><%= product.stock_description2 %></td>
+			<td><%= product.stock_description3 %></td>
+			<td><%= product.last_cost %></td>
+			<td><%= product.quantity_on_hand %></td>
+		</tr>
+	</tbody>
+	<% end %>
+</table>
+  </div>
+  <div class="tab-pane fade" id="allItems-md" role="tabpanel" aria-labelledby="allItems-tab-md">
+<table>
+	<thread>
+		<tr>
+			<th>Part Category</th>
+			<th>Stock Number</th>
+			<th>Stock Description1</th>
+			<th>Stock Description2</th>
+			<th>Stock Description3</th>
+			<th>Last Cost</th>
+			<th>Quantity on Hand</th>
+		</tr>
+	</thread>
+	<tbody>
+		<% @products.each do |product| %>
+		<tr>
+			<td><%= product.part_category %></td>
+			<td><%= product.stock_number %></td>
+			<td><%= product.stock_description1 %></td>
+			<td><%= product.stock_description2 %></td>
+			<td><%= product.stock_description3 %></td>
+			<td><%= product.last_cost %></td>
+			<td><%= product.quantity_on_hand %></td>
+		</tr>
+	</tbody>
+	<% end %>
+</table>
+  </div>
+  <div class="tab-pane fade" id="contact-md" role="tabpanel" aria-labelledby="contact-tab-md">
+    <p>Etsy mixtape wayfarers, ethical wes anderson tofu before they sold out mcsweeney's organic lomo
+      retro fanny pack lo-fi farm-to-table readymade. Messenger bag gentrify pitchfork tattooed craft beer,
+      iphone skateboard locavore carles etsy salvia banksy hoodie helvetica. DIY synth PBR banksy irony.
+      Leggings gentrify squid 8-bit cred pitchfork. Williamsburg banh mi whatever gluten-free, carles
+      pitchfork biodiesel fixie etsy retro mlkshk vice blog. Scenester cred you probably haven't heard of
+      them, vinyl craft beer blog stumptown. Pitchfork sustainable tofu synth chambray yr.</p>
+  </div>
+</div>
+
+<div>
+	<h4> Import that data! </h4>
+		<%= form_tag import_products_path, multipart: true do %>
+		<%= file_field_tag :file %>
+		<%= submit_tag "Import CSV" %>
+		<% end %> 
+</div>
