@@ -43,6 +43,7 @@ gem 'mailgun-ruby', require: 'mailgun'
 gem 'therubyracer', platforms: :ruby
 gem 'sitemap_generator'
 gem 'devise'
+gem "webpacker", "~> 3"
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
